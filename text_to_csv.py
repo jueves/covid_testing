@@ -1,5 +1,13 @@
 import pandas as pd
+import androidhelper
 
+droid = androidhelper.Android()
+
+# Get the text from the shared data
+shared_data = droid.getIntent().result[u'extras'][u'android.intent.extra.TEXT']
+
+# Do something with the data
+print(shared_data)
 
 names_list = []
 surnames_list = []
